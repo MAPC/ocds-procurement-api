@@ -1,0 +1,54 @@
+{
+  "user": {
+    "type": "object",
+    "required": [
+      "user"
+    ],
+    "properties": {
+      "user": {
+        "type": "object",
+        "required": [
+          "auth_token",
+          "email",
+          "first_name",
+          "id",
+          "last_name",
+          "phone_number",
+          "neighborhood_id",
+          "updated_at"
+        ],
+        "properties": {
+          "auth_token": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "email": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "neighborhood_id": {
+            "type": "integer"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}
