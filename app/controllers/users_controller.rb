@@ -13,201 +13,615 @@ class UsersController < ApplicationController
   def planning
     zxcv = <<-JSON
       {
-        "version": "1.1",
-        "uri": "https://github.com/open-contracting/sample-data/raw/1.1/fictional-example/ocds-213czf-000-00001.json",
-        "publishedDate": "2011-01-10T09:30:00Z",
-        "publisher": {
-          "name": "Open Data Services Co-operative Limited",
-          "scheme": "GB-COH",
-          "uid": "9506232.0",
-          "uri": "http://data.companieshouse.gov.uk/doc/company/09506232"
-        },
-        "license": "http://opendatacommons.org/licenses/pddl/1.0/",
-        "publicationPolicy": "https://github.com/open-contracting/sample-data/",
-        "releases": [
+        "id": "1",
+        "date": "2011-01-10T09:30:00Z",
+        "tag": ["planning"],
+        "initiationType": "tender",
+        "parties": [
           {
-            "ocid": "ocds-213czf-000-00001",
-            "id": "ocds-213czf-000-00001-01-planning",
-            "language": "en",
-            "date": "2009-03-15T14:45:00Z",
-            "initiationType": "tender",
-            "tag": [
-              "planning"
-            ],
-            "parties": [
+            "name": "string",
+            "id": "",
+            "identifier": {
+              "scheme": "string",
+              "id": "string",
+              "legalName": "string",
+              "uri": "string"
+            },
+            "additionalIdentifiers": [
               {
-                "id": "GB-LAC-E09000003",
-                "name": "London Borough of Barnet",
-                "roles": [
-                  "buyer"
-                ],
+                "scheme": "string",
+                "id": "string",
+                "legalName": "string",
+                "uri": "string"
+              }
+            ],
+            "address": {
+              "streetAddress": "string",
+              "locality": "string",
+              "region": "string",
+              "postalCode": "string",
+              "countryName": "string"
+            },
+            "contactPoint": {
+              "name": "string",
+              "email": "string",
+              "telephone": "string",
+              "faxNumber": "string",
+              "url": "string"
+            },
+            "roles": null,
+            "details": null
+          }
+        ],
+        "buyer": {
+          "name": "string",
+          "id": "string",
+          "identifier": {
+            "id": "",
+            "scheme": null,
+            "legalName": null,
+            "uri": null
+          },
+          "address": {
+            "streetAddress": "1600 Amphitheatre Pkwy.",
+            "locality": "Mountain View",
+            "region": "CA",
+            "postalCode": "94043",
+            "countryName": "United States"
+          },
+          "additionalIdentifiers": [],
+          "contactPoint": {
+            "name": "Test",
+            "email": "test@mapc.org",
+            "telephone": "203-867-5309",
+            "faxNumber": "123-456-7890",
+            "url": "https://www.mapc.org"
+          }
+        },
+        "planning": {
+          "rationale": "string",
+          "budget": {
+            "id": "string",
+            "description": "string",
+            "amount": {
+              "amount": 25000,
+              "currency": "ADP"
+            },
+            "project": "string",
+            "projectID": "string",
+            "uri": "string",
+            "source": null
+          },
+          "documents": [
+            {
+              "id": "string",
+              "documentType": "string",
+              "title": "string",
+              "description": "string",
+              "url": "string",
+              "datePublished": "2011-01-10T09:30:00Z",
+              "dateModified": "2011-01-10T09:30:00Z",
+              "format": "string",
+              "language": "string"
+            }
+          ],
+          "milestones": [
+            {
+              "id": "string",
+              "title": "string",
+              "type": "string",
+              "description": "string",
+              "code": "string",
+              "dueDate": "2011-01-10T09:30:00Z",
+              "dateMet": "2011-01-10T09:30:00Z",
+              "dateModified": "2011-01-10T09:30:00Z",
+              "status": "met",
+              "documents": []
+            }
+          ]
+        },
+        "tender": {
+          "id": "string",
+          "title": "string",
+          "description": "string",
+          "status": "planning",
+          "procuringEntity": {
+            "name": "string",
+            "id": "string",
+            "identifier": {
+              "id": "",
+              "scheme": null,
+              "legalName": null,
+              "uri": null
+            },
+            "address": {
+              "streetAddress": "1600 Amphitheatre Pkwy.",
+              "locality": "Mountain View",
+              "region": "CA",
+              "postalCode": "94043",
+              "countryName": "United States"
+            },
+            "additionalIdentifiers": [],
+            "contactPoint": {
+              "name": "Test",
+              "email": "test@mapc.org",
+              "telephone": "203-867-5309",
+              "faxNumber": "123-456-7890",
+              "url": "https://www.mapc.org"
+            }
+          },
+          "items": [
+            {
+              "id": "string",
+              "description": "string",
+              "classification": {
+                "scheme": "string",
+                "id": "string",
+                "description": "string",
+                "uri": "string"
+              },
+              "additionalClassifications": [
+                {
+                  "scheme": "string",
+                  "id": "string",
+                  "description": "string",
+                  "uri": "string"
+                }
+              ],
+              "quantity": 1,
+              "unit": {
+                "scheme": "string",
+                "id": "string",
+                "name": "string",
+                "value": {
+                  "amount": 25,
+                  "currency": "ADP"
+                },
+                "uri": "string"
+              }
+            }
+          ],
+          "value": {
+            "amount": 25,
+            "currency": "ADP"
+          },
+          "minValue": {
+            "amount": 25,
+            "currency": "ADP"
+          },
+          "procurementMethod": "open",
+          "procurementMethodDetails": "string",
+          "procurementMethodRationale": "string",
+          "mainProcurementCategory": "goods",
+          "additionalProcurementCategories": [],
+          "awardCriteria": "string",
+          "awardCriteriaDetails": "string",
+          "submissionMethod": [],
+          "submissionMethodDetails": "string",
+          "tenderPeriod": {
+            "startDate": "2011-01-10T09:30:00Z",
+            "endDate": "2011-01-10T09:30:00Z",
+            "maxExtentDate": "2011-01-10T09:30:00Z",
+            "durationInDays": 10
+          },
+          "enquiryPeriod": {
+            "startDate": "2011-01-10T09:30:00Z",
+            "endDate": "2011-01-10T09:30:00Z",
+            "maxExtentDate": "2011-01-10T09:30:00Z",
+            "durationInDays": 10
+          },
+          "hasEnquiries": false,
+          "eligibilityCriteria": "string",
+          "awardPeriod": {
+            "startDate": "2011-01-10T09:30:00Z",
+            "endDate": "2011-01-10T09:30:00Z",
+            "maxExtentDate": "2011-01-10T09:30:00Z",
+            "durationInDays": 10
+          },
+          "contractPeriod": {
+            "startDate": "2011-01-10T09:30:00Z",
+            "endDate": "2011-01-10T09:30:00Z",
+            "maxExtentDate": "2011-01-10T09:30:00Z",
+            "durationInDays": 10
+          },
+          "numberOfTenderers": 10,
+          "tenderers": [
+            {
+              "name": "string",
+              "id": "string",
+              "identifier": {
+                "id": "",
+                "scheme": null,
+                "legalName": null,
+                "uri": null
+              },
+              "address": {
+                "streetAddress": "1600 Amphitheatre Pkwy.",
+                "locality": "Mountain View",
+                "region": "CA",
+                "postalCode": "94043",
+                "countryName": "United States"
+              },
+              "additionalIdentifiers": [],
+              "contactPoint": {
+                "name": "Test",
+                "email": "test@mapc.org",
+                "telephone": "203-867-5309",
+                "faxNumber": "123-456-7890",
+                "url": "https://www.mapc.org"
+              }
+            }
+          ],
+          "documents": [
+            {
+              "id": "string",
+              "documentType": "string",
+              "title": "string",
+              "description": "string",
+              "url": "string",
+              "datePublished": "2011-01-10T09:30:00Z",
+              "dateModified": "2011-01-10T09:30:00Z",
+              "format": "string",
+              "language": "string"
+            }
+          ],
+          "milestones": [
+            {
+              "id": "string",
+              "title": "string",
+              "type": "string",
+              "description": "string",
+              "code": "string",
+              "dueDate": "2011-01-10T09:30:00Z",
+              "dateMet": "2011-01-10T09:30:00Z",
+              "dateModified": "2011-01-10T09:30:00Z",
+              "status": "met",
+              "documents": []
+            }
+          ],
+          "amendments": [
+            {
+              "date": "2011-01-10T09:30:00Z",
+              "rationale": "string",
+              "id": "string",
+              "description": "string",
+              "amendsReleaseID": "string",
+              "releaseID": "string",
+              "changes": []
+            }
+          ],
+          "amendment": {
+            "date": null,
+            "rationale": null,
+            "id": null,
+            "description": null,
+            "amendsReleaseID": null,
+            "releaseID": null,
+            "changes": []
+          }
+        },
+        "awards": [
+          {
+            "id": "string",
+            "title": "string",
+            "description": "string",
+            "status": "pending",
+            "date": "2011-01-10T09:30:00Z",
+            "value": {
+              "amount": 25,
+              "currency": "ADP"
+            },
+            "suppliers": [
+              {
+                "name": "string",
+                "id": "string",
                 "identifier": {
-                  "scheme": "GB-LAC",
-                  "id": "E09000003",
-                  "legalName": "London Borough of Barnet"
+                  "id": "",
+                  "scheme": null,
+                  "legalName": null,
+                  "uri": null
                 },
                 "address": {
-                  "streetAddress": "4, North London Business Park, Oakleigh Rd S",
-                  "locality": "London",
-                  "region": "London",
-                  "postalCode": "N11 1NP",
-                  "countryName": "United Kingdom"
+                  "streetAddress": "1600 Amphitheatre Pkwy.",
+                  "locality": "Mountain View",
+                  "region": "CA",
+                  "postalCode": "94043",
+                  "countryName": "United States"
                 },
+                "additionalIdentifiers": [],
                 "contactPoint": {
-                  "name": "Procurement Team",
-                  "email": "procurement-team@example.com",
-                  "telephone": "01234 345 346",
-                  "faxNumber": "01234 345 345",
-                  "url": "http://example.com/contact/"
+                  "name": "Test",
+                  "email": "test@mapc.org",
+                  "telephone": "203-867-5309",
+                  "faxNumber": "123-456-7890",
+                  "url": "https://www.mapc.org"
                 }
               }
             ],
-            "buyer": {
-              "id": "GB-LAC-E09000003",
-              "name": "London Borough of Barnet"
+            "items": [
+              {
+                "id": "string",
+                "description": "string",
+                "classification": {
+                  "scheme": "string",
+                  "id": "string",
+                  "description": "string",
+                  "uri": "string"
+                },
+                "additionalClassifications": [
+                  {
+                    "scheme": "string",
+                    "id": "string",
+                    "description": "string",
+                    "uri": "string"
+                  }
+                ],
+                "quantity": 25,
+                "unit": {
+                  "scheme": "string",
+                  "id": "string",
+                  "name": "string",
+                  "value": {
+                    "amount": 25,
+                    "currency": "ADP"
+                  },
+                  "uri": "string"
+                }
+              }
+            ],
+            "contractPeriod": {
+              "startDate": "2011-01-10T09:30:00Z",
+              "endDate": "2011-01-10T09:30:00Z",
+              "maxExtentDate": "2011-01-10T09:30:00Z",
+              "durationInDays": 10
             },
-            "planning": {
-              "budget": {
-                "id": "6801ad388f3a38b7740dde20108c58b35984ee91",
-                "description": "Budget allocation for highway maintenance, aligned with 2015 strategic plan. ",
-                "amount": {
-                  "amount": 6700000,
-                  "currency": "GBP"
+            "documents": [
+              {
+                "id": "string",
+                "documentType": "string",
+                "title": "string",
+                "description": "string",
+                "url": "string",
+                "datePublished": "2011-01-10T09:30:00Z",
+                "dateModified": "2011-01-10T09:30:00Z",
+                "format": "string",
+                "language": "string"
+              }
+            ],
+            "amendments": [
+              {
+                "date": "2011-01-10T09:30:00Z",
+                "rationale": "string",
+                "id": "string",
+                "description": "string",
+                "amendsReleaseID": "string",
+                "releaseID": "string",
+                "changes": []
+              }
+            ],
+            "amendment": {
+              "date": null,
+              "rationale": null,
+              "id": null,
+              "description": null,
+              "amendsReleaseID": null,
+              "releaseID": null,
+              "changes": []
+            }
+          }
+        ],
+        "contracts": [
+          {
+            "id": "string",
+            "awardID": "string",
+            "title": "string",
+            "description": "string",
+            "status": "pending",
+            "period": {
+              "startDate": "2011-01-10T09:30:00Z",
+              "endDate": "2011-01-10T09:30:00Z",
+              "maxExtentDate": "2011-01-10T09:30:00Z",
+              "durationInDays": 10
+            },
+            "value": {
+              "amount": 25,
+              "currency": "ADP"
+            },
+            "items": [
+              {
+                "id": "string",
+                "description": "string",
+                "classification": {
+                  "scheme": "string",
+                  "id": "string",
+                  "description": "string",
+                  "uri": "string"
                 },
-                "project": "Central Junction Cycle Scheme",
-                "projectID": "SP001",
-                "uri": "https://openspending.org/uk-barnet-budget/entries/6801ad388f3a38b7740dde20108c58b35984ee91"
-              },
-              "rationale": "The 2009 Strategic Plan identifies a need for an improved cycle route in the centre of town.",
-              "documents": [
+                "additionalClassifications": [
+                  {
+                    "scheme": "string",
+                    "id": "string",
+                    "description": "string",
+                    "uri": "string"
+                  }
+                ],
+                "quantity": 25,
+                "unit": {
+                  "scheme": "string",
+                  "id": "string",
+                  "name": "string",
+                  "value": {
+                    "amount": 25,
+                    "currency": "ADP"
+                  },
+                  "uri": "string"
+                }
+              }
+            ],
+            "dateSigned": "2011-01-10T09:30:00Z",
+            "documents": [
+              {
+                "id": "string",
+                "documentType": "string",
+                "title": "string",
+                "description": "string",
+                "url": "string",
+                "datePublished": "2011-01-10T09:30:00Z",
+                "dateModified": "2011-01-10T09:30:00Z",
+                "format": "string",
+                "language": "string"
+              }
+            ],
+            "implementation": {
+              "transactions": [
                 {
-                  "id": "1.0",
-                  "documentType": "procurementPlan",
-                  "title": "Area Wide Cycle Improvements - Procurement Plan",
-                  "description": "The overall strategic framework for procurement to enhance cycle provision.",
-                  "url": "http://example.com/opencontracting/documents/planning/highways/procurementPlan.pdf",
-                  "datePublished": "2009-01-05T00:00:00Z",
-                  "format": "application/pdf",
-                  "language": "en"
-                },
-                {
-                  "id": "2.0",
-                  "documentType": "needsAssessment",
-                  "title": "Cycle provision - Needs Assessment",
-                  "description": "Needs assessment for provision for cyclists in the centre of town.",
-                  "url": "http://example.com/opencontracting/documents/ocds-213czf-000-00001/needsAssessment.pdf",
-                  "datePublished": "2009-01-15T00:00:00Z",
-                  "format": "application/pdf",
-                  "language": "en"
+                  "id": "string",
+                  "source": "string",
+                  "date": "2011-01-10T09:30:00Z",
+                  "amount": {
+                    "amount": 25,
+                    "currency": "ADP"
+                  },
+                  "value": {
+                    "amount": 25,
+                    "currency": "ADP"
+                  },
+                  "payer": {
+                    "name": "string",
+                    "id": "string",
+                    "identifier": {
+                      "id": "",
+                      "scheme": null,
+                      "legalName": null,
+                      "uri": null
+                    },
+                    "address": {
+                      "streetAddress": "1600 Amphitheatre Pkwy.",
+                      "locality": "Mountain View",
+                      "region": "CA",
+                      "postalCode": "94043",
+                      "countryName": "United States"
+                    },
+                    "additionalIdentifiers": [],
+                    "contactPoint": {
+                      "name": "Test",
+                      "email": "test@mapc.org",
+                      "telephone": "203-867-5309",
+                      "faxNumber": "123-456-7890",
+                      "url": "https://www.mapc.org"
+                    }
+                  },
+                  "payee": {
+                    "name": "string",
+                    "id": "string",
+                    "identifier": {
+                      "id": "",
+                      "scheme": null,
+                      "legalName": null,
+                      "uri": null
+                    },
+                    "address": {
+                      "streetAddress": "1600 Amphitheatre Pkwy.",
+                      "locality": "Mountain View",
+                      "region": "CA",
+                      "postalCode": "94043",
+                      "countryName": "United States"
+                    },
+                    "additionalIdentifiers": [],
+                    "contactPoint": {
+                      "name": "Test",
+                      "email": "test@mapc.org",
+                      "telephone": "203-867-5309",
+                      "faxNumber": "123-456-7890",
+                      "url": "https://www.mapc.org"
+                    }
+                  },
+                  "providerOrganization": {
+                    "scheme": null,
+                    "id": null,
+                    "legalName": null,
+                    "uri": null
+                  },
+                  "receiverOrganization": {
+                    "scheme": null,
+                    "id": null,
+                    "legalName": null,
+                    "uri": null
+                  },
+                  "uri": "string"
                 }
               ],
               "milestones": [
                 {
-                  "id": "1.0",
-                  "type": "preProcurement",
-                  "title": "Strategic outline procurement plan approval",
-                  "description": "Approval of the strategic outline procurement plan by the procurement steering group",
-                  "status": "met",
-                  "dueDate": "2009-03-14T17:00:00Z",
-                  "dateMet": "2009-03-14T17:00:00Z"
-                },
+                  "id": "string",
+                  "title": "string",
+                  "type": "string",
+                  "description": "string",
+                  "code": "string",
+                  "dueDate": "2011-01-10T09:30:00Z",
+                  "dateMet": "2011-01-10T09:30:00Z",
+                  "dateModified": "2011-01-10T09:30:00Z",
+                  "status": "met"
+                }
+              ],
+              "documents": [
                 {
-                  "id": "2.0",
-                  "type": "engagement",
-                  "title": "Public consultation",
-                  "description": "A public consultation on the proposed cycle lane will be held at the council offices",
-                  "status": "scheduled",
-                  "dueDate": "2009-05-01T09:00:00Z"
+                  "id": "string",
+                  "documentType": "string",
+                  "title": "string",
+                  "description": "string",
+                  "url": "string",
+                  "datePublished": "2011-01-10T09:30:00Z",
+                  "dateModified": "2011-01-10T09:30:00Z",
+                  "format": "string",
+                  "language": "string"
                 }
               ]
             },
-            "tender": {
-              "id": "ocds-213czf-000-00001-01-planning",
-              "title": "Planned cycle lane improvements",
-              "description": "The authority plans to tender for improvements to the cycle lane in early 2010. This notice provides advanced notice of the intention to tender, and details to upcoming consultation events.",
-              "mainProcurementCategory": "works",
-              "status": "planned",
-              "minValue": {
-                "amount": 500000,
-                "currency": "GBP"
-              },
-              "value": {
-                "amount": 1000000,
-                "currency": "GBP"
-              },
-              "procurementMethod": "open",
-              "procurementMethodDetails": "In open procedures, any interested economic operator may submit a tender in response to a contract notice. ",
-              "procurementMethodRationale": "An open competitive tender is required by EU Rules",
-              "awardCriteria": "bestProposal",
-              "awardCriteriaDetails": "The best proposal, subject to value for money requirements, will be accepted.",
-              "tenderPeriod": {
-                "startDate": "2010-02-01T00:00:00Z",
-                "durationInDays": 31
-              },
-              "enquiryPeriod": {
-                "durationInDays": 14
-              },
-              "contractPeriod": {
-                "startDate": "2010-06-01T00:00:00Z",
-                "endDate": "2011-05-31T23:59:00Z",
-                "durationInDays": 365
-              },
-              "procuringEntity": {
-                "id": "GB-LAC-E09000003",
-                "name": "London Borough of Barnet"
-              },
-              "documents": [
-                {
-                  "id": "3.0",
-                  "documentType": "x_consultationDocument",
-                  "title": "Consultation on cycle provision",
-                  "description": "A consultation document inviting citizen input into cycle provision.",
-                  "url": "http://example.com/consultations/cycle-provision/",
-                  "datePublished": "2010-02-15T00:00:00Z",
-                  "format": "text/html",
-                  "language": "en"
-                },
-                {
-                  "id": "4.0",
-                  "documentType": "x_map",
-                  "title": "Map of affected areas",
-                  "description": "A map showing areas affected by the planned highway updates. Available from local libraries.",
-                  "datePublished": "2010-02-15T00:00:00Z",
-                  "format": "offline/print",
-                  "language": "en"
-                }
-              ],
-              "items": [
-                {
-                  "id": "1.0",
-                  "description": "Cycle lane improvements",
-                  "classification": {
-                    "scheme": "CPV",
-                    "id": "45233130.0",
-                    "description": "Construction work for highways",
-                    "uri": "http://cpv.data.ac.uk/code-45233130"
-                  },
-                  "quantity": 10,
-                  "unit": {
-                    "name": "Miles",
-                    "id": "SMI",
-                    "scheme": "UNCEFACT",
-                    "value": {
-                      "amount": 100000,
-                      "currency": "GBP"
-                    }
-                  },
-                  "additionalClassifications": [
-                    {
-                      "scheme": "CPV",
-                      "id": "45233162-2",
-                      "description": "Cycle path construction work",
-                      "uri": "http://cpv.data.ac.uk/code-45233162.html"
-                    }
-                  ]
-                }
-              ]
-            }
+            "relatedProcesses": [
+              {
+                "id": "",
+                "relationship": [],
+                "title": "string",
+                "scheme": "string",
+                "identifier": "string",
+                "uri": "string"
+              }
+            ],
+            "milestones": [
+              {
+                "id": "string",
+                "title": "string",
+                "type": "string",
+                "description": "string",
+                "code": "string",
+                "dueDate": "2011-01-10T09:30:00Z",
+                "dateMet": "2011-01-10T09:30:00Z",
+                "dateModified": "2011-01-10T09:30:00Z",
+                "status": "met"
+              }
+            ],
+            "amendments": [
+              {
+                "date": "2011-01-10T09:30:00Z",
+                "rationale": "string",
+                "id": "string",
+                "description": "string",
+                "amendsReleaseID": "string",
+                "releaseID": "string"
+              }
+            ]
+          }
+        ],
+        "language": "string",
+        "relatedProcesses": [
+          {
+            "id": "",
+            "relationship": [],
+            "title": "string",
+            "scheme": "string",
+            "identifier": "string",
+            "uri": "string"
           }
         ]
       }

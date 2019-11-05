@@ -19,7 +19,7 @@ describe "Validate planning schema" do
     it "matches" do
       get '/planning'
 
-      expect(response).to match_response_schema("release")
+      expect(response).to match_response_schema("single-release")
     end
   end
 end
