@@ -10,20 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_01_162247) do
+ActiveRecord::Schema.define(version: 2019_11_05_195324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", force: :cascade do |t|
-    t.string "auth_token"
-    t.string "email"
-    t.string "first_name"
-    t.string "last_name"
-    t.integer "neighborhood_id"
-    t.string "phone_number"
+  create_table "packages", force: :cascade do |t|
+    t.string "uri"
+    t.string "version"
+    t.string "extensions", array: true
+    t.datetime "published_date"
+    t.string "license"
+    t.jsonb "publisher"
+    t.string "publication_policy"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "releases", force: :cascade do |t|
+    t.jsonb "data"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "package_id"
+    t.index ["package_id"], name: "index_releases_on_package_id"
+  end
+
+  add_foreign_key "releases", "packages"
 end
