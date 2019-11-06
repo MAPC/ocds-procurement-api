@@ -4,7 +4,7 @@ class ReleasesController < ApplicationController
     release = Release.new(data: params['data'], package: package)
 
     if release.save
-      render json: { status: 'worked' }, status: :created
+      render json: release.to_json, status: :created
     else
       render json: release.errors, status: :unprocessable_entity
     end
