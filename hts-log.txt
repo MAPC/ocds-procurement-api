@@ -1,0 +1,16 @@
+HTTrack3.49-2 launched on Thu, 07 Nov 2019 10:24:39 at help
+(httrack help )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:24:39	Warning: 	Cache: damaged cache, trying to repair
+10:24:39	Warning: 	Cache: 0 bytes successfully recovered in 0 entries
+10:24:39	Warning: 	Cache: error trying to open the cache
+10:24:39	Error: 	"Unable to get server's address: nodename nor servname provided, or not known" (-5) after 2 retries at link help/robots.txt (from primary/primary)
+10:24:39	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link help/ (from primary/primary)
+10:24:39	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link help/ (from primary/primary)
+10:24:39	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link help/ (from primary/primary)
+10:24:39	Warning: 	No data seems to have been transferred during this session! : restoring previous one!
